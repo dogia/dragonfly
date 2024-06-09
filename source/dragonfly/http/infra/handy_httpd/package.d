@@ -1,4 +1,4 @@
-module dragonfly.http.infra.handy_httpd;
+module source.dragonfly.http.infra.handy_httpd;
 
 public import source.dragonfly.http.infra.handy_httpd.handy_httpd;
 public import source.dragonfly.http.infra.handy_httpd.handy_httpd_router;

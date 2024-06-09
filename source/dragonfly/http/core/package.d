@@ -1,4 +1,4 @@
-module dragonfly.http.core;
+module source.dragonfly.http.core;
 
 public import source.dragonfly.http.core.http_header;
 public import source.dragonfly.http.core.http_method;
