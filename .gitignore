@@ -15,4 +15,4 @@ dragonfly-test-*
 *.obj
 *.lst
 .github/
-source/app
+source/app.d
