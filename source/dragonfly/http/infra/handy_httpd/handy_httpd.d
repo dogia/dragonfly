@@ -8,7 +8,7 @@ import std.stdio;
 import handy_httpd : HttpRequestContext, HttpRequestHandler;
 
 class HandyHttpd : HttpServer, HttpRequestHandler {
-    private HttpRouter _router = null;
+    private HandyHttpdRouter _router;
     private string _proto = "http";
     private ushort _port;
     private string _hostname;
@@ -32,7 +32,7 @@ class HandyHttpd : HttpServer, HttpRequestHandler {
     }
 
     void handle(ref HttpRequestContext ctx) {
-        writeln(this.router());
+        this._router.resolve(ctx);
     }
 
     void start() {
