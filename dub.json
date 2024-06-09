@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Daniel Osorio Orozco"
+	],
+	"copyright": "Copyright © 2024, Daniel Osorio Orozco",
+	"dependencies": {
+		"handy-httpd": "~>8.4.0"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "dragonfly"
+}

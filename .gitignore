@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/dragonfly
+dragonfly.so
+dragonfly.dylib
+dragonfly.dll
+dragonfly.a
+dragonfly.lib
+dragonfly-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
