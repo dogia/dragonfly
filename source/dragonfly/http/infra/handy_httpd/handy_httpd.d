@@ -20,7 +20,7 @@ class HandyHttpd : HttpServer, HttpRequestHandler {
         return this._router;
     }
 
-    HandyHttpd config(ushort port, string hostname = "localhostname") {
+    HandyHttpd config(ushort port, string hostname = "localhost") {
         this._port = port;
         this._hostname = hostname;
         return this;

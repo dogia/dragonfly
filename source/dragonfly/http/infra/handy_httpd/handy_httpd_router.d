@@ -22,11 +22,15 @@ class HandyHttpdRouter : HttpRouter {
     }
 
     HttpRoute add(
-        HTTP_METHOD[] method,
+        HTTP_METHOD[] methods,
         string path,
         void delegate(HttpRequest request, HttpResponse response) handler
     ) {
-        return new HandyHttpdRoute(handler);
+        auto route = new HandyHttpdRoute(handler);
+        foreach(method; methods) {
+            this.routes[method][path] = route;
+        }
+        return route;
     }
 
     void resolve(ref HttpRequestContext ctx) {

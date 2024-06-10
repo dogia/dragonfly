@@ -7,12 +7,19 @@ import source.dragonfly.http.core.http_response;
 
 class HandyHttpdRoute : HttpRoute {
     HttpMiddleware[] middlewares;
+    HttpMiddleware[] afterMiddlewares;
+
     this(void delegate(HttpRequest request, HttpResponse response) handler) {
 
     }
 
     HandyHttpdRoute middleware(HttpMiddleware middleware) {
         this.middlewares ~= middleware;
+        return this;
+    }
+
+    HandyHttpdRoute afterMiddleware(HttpMiddleware middleware) {
+        this.afterMiddlewares ~= middleware;
         return this;
     }
 }
