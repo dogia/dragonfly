@@ -34,6 +34,20 @@ void main() {
     server.start();
 }
 ```
+```d
+import dragonfly : HttpServer, HttpRequest, HttpResponse, HTTP_METHOD, HTTP_STATUS_CODE;
+
+void main() {
+    auto server = new HttpServer();
+    auto router = server.router();
+
+    router.add(HTTP_METHOD.GET, "/cat", (HttpRequest request, HttpResponse response) {
+        response.json(CAT).withStatus(HTTP_STATUS_CODE.CREATED);
+    });
+
+    server.start();
+}
+```
 
 ## Contribución
 
