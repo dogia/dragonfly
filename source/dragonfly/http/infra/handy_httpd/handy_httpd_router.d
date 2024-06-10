@@ -1,5 +1,9 @@
 module source.dragonfly.http.infra.handy_httpd.handy_httpd_router;
+
 import source.dragonfly.http.infra.handy_httpd.handy_httpd_route;
+
+import source.dragonfly.http.infra.handy_httpd.handy_httpd_request;
+import source.dragonfly.http.infra.handy_httpd.handy_httpd_response;
 
 import source.dragonfly.http.core.http_method;
 import source.dragonfly.http.core.http_request;
@@ -34,6 +38,8 @@ class HandyHttpdRouter : HttpRouter {
     }
 
     void resolve(ref HttpRequestContext ctx) {
+        auto request = new HandyHttpdRequest(ctx);
+        auto response = new HandyHttpdResponse(ctx);
         ctx.response.writeBodyString("Mimimi");
     }
 }

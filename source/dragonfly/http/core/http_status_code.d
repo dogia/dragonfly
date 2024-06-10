@@ -1,4 +1,4 @@
-module source.dragonfly.http.core.http_status;
+module source.dragonfly.http.core.http_status_code;
 
 enum HTTP_STATUS_CODE {
     // Information
